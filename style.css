@@ -1,0 +1,129 @@
+
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(270deg, #8e2de2, #4a00e0, #00c6ff, #0072ff);
+    background-size: 800% 800%;
+    animation: gradientBG 15s ease infinite;
+    overflow: hidden;
+  }
+
+  @keyframes gradientBG {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+  }
+
+
+  .converter {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+    border-radius: 25px;
+    padding: 40px 30px;
+    width: 360px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+    color: #fff;
+    text-align: center;
+    position: relative;
+  }
+
+  /* Floating currency icons - decorative */
+  .floating-icon {
+    position: absolute;
+    font-size: 40px;
+    opacity: 0.1;
+    animation: floatUpDown 6s ease-in-out infinite;
+    user-select: none;
+  }
+
+  .icon1 {top: 10%; left: 10%; animation-delay: 0s;}
+  .icon2 {top: 80%; left: 20%; animation-delay: 2s;}
+  .icon3 {top: 40%; right: 10%; animation-delay: 4s;}
+
+  @keyframes floatUpDown {
+    0%, 100% {transform: translateY(0);}
+    50% {transform: translateY(-15px);}
+  }
+
+  h2 {
+    margin-bottom: 5px;
+    font-weight: 600;
+    font-size: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  h2 .icon {
+    font-size: 32px;
+  }
+
+  p.description {
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-weight: 400;
+    font-size: 14px;
+    color: #ddd;
+  }
+
+  input, select, button {
+    width: 100%;
+    padding: 12px 18px;
+    margin: 10px 0;
+    border-radius: 12px;
+    border: none;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+  }
+
+  input, select {
+    background: rgba(255,255,255,0.25);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.3);
+  }
+
+  input::placeholder {
+    color: #eee;
+  }
+
+  input:focus, select:focus {
+    outline: none;
+    background: rgba(255,255,255,0.4);
+    border-color: #ff77a9;
+    color: #000;
+  }
+
+  button {
+    background: #ff6fa5;
+    font-weight: 700;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 5px 15px rgba(255,111,165,0.5);
+  }
+
+  button:hover {
+    background: #ff4f8a;
+    box-shadow: 0 8px 25px rgba(255,79,138,0.75);
+  }
+
+  #result {
+    margin-top: 25px;
+    font-size: 20px;
+    font-weight: 600;
+    min-height: 30px;
+    color: #fff;
+  }
+
+  @media (max-width: 400px) {
+    .converter {
+      width: 90vw;
+      padding: 30px 20px;
+    }
+  }
